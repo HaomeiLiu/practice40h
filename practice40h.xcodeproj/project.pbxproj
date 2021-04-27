@@ -99,12 +99,11 @@
 		EE06944226385995007F9E26 /* practice40h */ = {
 			isa = PBXGroup;
 			children = (
-				EE06944326385995007F9E26 /* AppDelegate.swift */,
-				EE06944526385995007F9E26 /* SceneDelegate.swift */,
-				EE06944726385995007F9E26 /* ViewController.swift */,
-				EE06944926385995007F9E26 /* Main.storyboard */,
+				EE06947926385D19007F9E26 /* Supporting Files */,
+				EE06947826385CF0007F9E26 /* Controller */,
+				EE06947726385CE7007F9E26 /* View */,
+				EE06947626385CDA007F9E26 /* Model */,
 				EE06944C2638599D007F9E26 /* Assets.xcassets */,
-				EE06944E2638599D007F9E26 /* LaunchScreen.storyboard */,
 				EE0694512638599D007F9E26 /* Info.plist */,
 			);
 			path = practice40h;
@@ -126,6 +125,39 @@
 				EE0694672638599E007F9E26 /* Info.plist */,
 			);
 			path = practice40hUITests;
+			sourceTree = "<group>";
+		};
+		EE06947626385CDA007F9E26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE06947726385CE7007F9E26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE06944926385995007F9E26 /* Main.storyboard */,
+				EE06944E2638599D007F9E26 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE06947826385CF0007F9E26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE06944726385995007F9E26 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE06947926385D19007F9E26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE06944526385995007F9E26 /* SceneDelegate.swift */,
+				EE06944326385995007F9E26 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
