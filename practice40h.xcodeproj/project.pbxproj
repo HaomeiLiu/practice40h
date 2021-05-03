@@ -19,6 +19,8 @@
 		EE06945B2638599E007F9E26 /* practice40hTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06945A2638599E007F9E26 /* practice40hTests.swift */; };
 		EE0694662638599E007F9E26 /* practice40hUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0694652638599E007F9E26 /* practice40hUITests.swift */; };
 		EEC31B51263FCB4F00736CCA /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = EEC31B50263FCB4F00736CCA /* UICircularProgressRing */; };
+		EEC31BA126405B7400736CCA /* RoundTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BA026405B7400736CCA /* RoundTabBarController.swift */; };
+		EEC31BA626405BF000736CCA /* RoundTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BA526405BF000736CCA /* RoundTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		EE0694612638599E007F9E26 /* practice40hUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = practice40hUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0694652638599E007F9E26 /* practice40hUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practice40hUITests.swift; sourceTree = "<group>"; };
 		EE0694672638599E007F9E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC31BA026405B7400736CCA /* RoundTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTabBarController.swift; sourceTree = "<group>"; };
+		EEC31BA526405BF000736CCA /* RoundTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 			children = (
 				EE06944926385995007F9E26 /* Main.storyboard */,
 				EE06944E2638599D007F9E26 /* LaunchScreen.storyboard */,
+				EEC31BA526405BF000736CCA /* RoundTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				EE06944726385995007F9E26 /* ViewController.swift */,
+				EEC31BA026405B7400736CCA /* RoundTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -448,6 +454,8 @@
 			files = (
 				EE06944826385995007F9E26 /* ViewController.swift in Sources */,
 				EE06944426385995007F9E26 /* AppDelegate.swift in Sources */,
+				EEC31BA126405B7400736CCA /* RoundTabBarController.swift in Sources */,
+				EEC31BA626405BF000736CCA /* RoundTabBar.swift in Sources */,
 				EE06944626385995007F9E26 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

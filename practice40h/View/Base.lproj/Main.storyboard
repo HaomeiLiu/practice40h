@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LQn-1e-FaS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Account-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="practice40h" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +18,73 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" id="fjR-EE-kCG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13.043478260869566" y="64.955357142857139"/>
+            <point key="canvasLocation" x="1029" y="1501"/>
+        </scene>
+        <!--Practice!-->
+        <scene sceneID="X5f-Nj-2Bl">
+            <objects>
+                <viewController id="WKn-NK-UBb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pMb-Wl-F5t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YWN-kT-38Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Practice!" image="music.note" catalog="system" id="Ucf-VX-QNw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rw-xL-CCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="779"/>
+        </scene>
+        <!--Record-->
+        <scene sceneID="DWs-pE-Dnm">
+            <objects>
+                <viewController id="fue-j3-Qqt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BkN-Ae-DZm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6jy-Bq-lAM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Record" image="calendar.circle" catalog="system" id="JNV-28-0Ri"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ik4-Fh-XbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="108"/>
+        </scene>
+        <!--Round Tab Bar Controller-->
+        <scene sceneID="3oQ-eb-BUx">
+            <objects>
+                <tabBarController id="LQn-1e-FaS" customClass="RoundTabBarController" customModule="practice40h" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vi8-u8-6eX" customClass="RoundTabBar" customModule="practice40h" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fue-j3-Qqt" kind="relationship" relationship="viewControllers" id="64Q-DF-4RF"/>
+                        <segue destination="WKn-NK-UBb" kind="relationship" relationship="viewControllers" id="Tal-xy-ApM"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mtG-cf-8co"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9OC-0r-g2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="779"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Vi8-u8-6eX">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="calendar.circle" catalog="system" width="128" height="121"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
