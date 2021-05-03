@@ -1,0 +1,20 @@
+PODS:
+  - FSCalendar (2.8.2)
+  - KDCircularProgress (1.5.4)
+
+DEPENDENCIES:
+  - FSCalendar
+  - KDCircularProgress
+
+SPEC REPOS:
+  trunk:
+    - FSCalendar
+    - KDCircularProgress
+
+SPEC CHECKSUMS:
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  KDCircularProgress: 98200c6b8e85d22bc04eb644721d3b1e12b0686b
+
+PODFILE CHECKSUM: a6adaba1729fbf2a1cf0aa3725d269a773f8cd07
+
+COCOAPODS: 1.10.1
