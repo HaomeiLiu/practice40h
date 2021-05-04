@@ -23,6 +23,9 @@
 		EEC31BA626405BF000736CCA /* RoundTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BA526405BF000736CCA /* RoundTabBar.swift */; };
 		EEC31BB3264060ED00736CCA /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BB2264060ED00736CCA /* TimeViewController.swift */; };
 		EEC31BC0264065EC00736CCA /* TimerRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BBF264065EC00736CCA /* TimerRing.swift */; };
+		EEC31BD22641C9DD00736CCA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BD12641C9DD00736CCA /* WelcomeViewController.swift */; };
+		EEC31BD72641D58800736CCA /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BD62641D58800736CCA /* RealmModels.swift */; };
+		EEC31BDC2641F4AD00736CCA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BDB2641F4AC00736CCA /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		EEC31BA526405BF000736CCA /* RoundTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTabBar.swift; sourceTree = "<group>"; };
 		EEC31BB2264060ED00736CCA /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		EEC31BBF264065EC00736CCA /* TimerRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRing.swift; sourceTree = "<group>"; };
+		EEC31BD12641C9DD00736CCA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		EEC31BD62641D58800736CCA /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
+		EEC31BDB2641F4AC00736CCA /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 		EE06947626385CDA007F9E26 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EEC31BD62641D58800736CCA /* RealmModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +208,8 @@
 				EEC31BA026405B7400736CCA /* RoundTabBarController.swift */,
 				EEC31BB2264060ED00736CCA /* TimeViewController.swift */,
 				EEC31BBF264065EC00736CCA /* TimerRing.swift */,
+				EEC31BD12641C9DD00736CCA /* WelcomeViewController.swift */,
+				EEC31BDB2641F4AC00736CCA /* UserViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -458,7 +467,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC31BD72641D58800736CCA /* RealmModels.swift in Sources */,
+				EEC31BDC2641F4AD00736CCA /* UserViewController.swift in Sources */,
 				EEC31BC0264065EC00736CCA /* TimerRing.swift in Sources */,
+				EEC31BD22641C9DD00736CCA /* WelcomeViewController.swift in Sources */,
 				EE06944826385995007F9E26 /* ViewController.swift in Sources */,
 				EEC31BB3264060ED00736CCA /* TimeViewController.swift in Sources */,
 				EE06944426385995007F9E26 /* AppDelegate.swift in Sources */,

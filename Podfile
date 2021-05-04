@@ -9,7 +9,7 @@ target 'practice40h' do
   # pod 'Firebase/Auth'
   # pod 'Firebase/Firestore'
   pod 'FSCalendar'
-  pod 'KDCircularProgress'
+  pod 'RealmSwift'
 
   target 'practice40hTests' do
     inherit! :search_paths

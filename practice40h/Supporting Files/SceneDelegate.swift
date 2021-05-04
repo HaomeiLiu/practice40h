@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import RealmSwift
+
+let app = App(id: "practice40h-bnpjn")
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -45,6 +48,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+    
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else {
+            return
+        }
+        
+        // change the root view controller to your specific view controller
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
     }
 
 

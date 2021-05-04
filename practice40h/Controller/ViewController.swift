@@ -60,12 +60,13 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     }
     
     //Data Source
-    func minimumDate(for calendar: FSCalendar) -> Date {
-        return Date()
-    }
+//    func minimumDate(for calendar: FSCalendar) -> Date {
+//        return Date()
+//    }
     
     func maximumDate(for calendar: FSCalendar) -> Date {
-        return Date().addingTimeInterval((24*60*60)*5)
+//        return Date().addingTimeInterval((24*60*60)*5)
+        return Date()
     }
     
 

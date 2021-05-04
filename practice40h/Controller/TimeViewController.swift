@@ -8,18 +8,19 @@
 import UIKit
 import SwiftUI
 import UICircularProgressRing
+import RealmSwift
 
 class TimeViewController: UIViewController {
     var duration: Double = 60
     var timer: Timer!
     var timerData: TimerData = TimerData(duration:60, paused: true, done: false)
-            
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var durationLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        datePicker.isHidden = false
     }
     
     @IBSegueAction func addTimerRingView(_ coder: NSCoder) -> UIViewController? {
