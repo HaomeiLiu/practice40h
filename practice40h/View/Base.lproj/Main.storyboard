@@ -27,18 +27,78 @@
         <!--Practice!-->
         <scene sceneID="X5f-Nj-2Bl">
             <objects>
-                <viewController id="WKn-NK-UBb" sceneMemberID="viewController">
+                <viewController id="WKn-NK-UBb" customClass="TimeViewController" customModule="practice40h" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pMb-Wl-F5t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAi-Mr-6ll">
+                                <rect key="frame" x="60" y="159" width="294" height="321"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="0MO-2K-B1L"/>
+                                    <constraint firstAttribute="height" constant="321" id="hcT-4e-psR"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="bha-jw-fUB" kind="embed" destinationCreationSelector="addTimerRingView:" id="gGS-9b-3l0"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJc-6Y-cxi">
+                                <rect key="frame" x="330" y="15" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-dq-u9i">
+                                <rect key="frame" x="115" y="747" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="userDidTappedStart:" destination="WKn-NK-UBb" eventType="touchUpInside" id="gcD-G4-fXm"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="20" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rv-de-pJk">
+                                <rect key="frame" x="0.0" y="503" width="414" height="216"/>
+                                <connections>
+                                    <action selector="userDidChangedDuration:" destination="WKn-NK-UBb" eventType="valueChanged" id="Hic-BV-hNl"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31u-tz-nTW">
+                                <rect key="frame" x="262" y="747" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="userDidTappedReset:" destination="WKn-NK-UBb" eventType="touchUpInside" id="23T-k8-bxU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YWN-kT-38Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YWN-kT-38Q" firstAttribute="bottom" secondItem="31u-tz-nTW" secondAttribute="bottom" constant="36" id="0uV-Mz-Vda"/>
+                            <constraint firstItem="JAi-Mr-6ll" firstAttribute="top" secondItem="YWN-kT-38Q" secondAttribute="top" constant="115" id="KZl-va-X1u"/>
+                            <constraint firstItem="YWN-kT-38Q" firstAttribute="trailing" secondItem="31u-tz-nTW" secondAttribute="trailing" constant="113" id="QPZ-FA-Ter"/>
+                            <constraint firstItem="YWN-kT-38Q" firstAttribute="bottom" secondItem="bnC-dq-u9i" secondAttribute="bottom" constant="36" id="cVq-d2-6fJ"/>
+                            <constraint firstItem="bnC-dq-u9i" firstAttribute="top" secondItem="7Rv-de-pJk" secondAttribute="bottom" constant="28" id="gCo-HH-lFc"/>
+                            <constraint firstItem="JAi-Mr-6ll" firstAttribute="centerX" secondItem="pMb-Wl-F5t" secondAttribute="centerX" id="lNP-Am-N9J"/>
+                            <constraint firstItem="bnC-dq-u9i" firstAttribute="leading" secondItem="YWN-kT-38Q" secondAttribute="leading" constant="115" id="ztB-kP-Ljf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Practice!" image="music.note" catalog="system" id="Ucf-VX-QNw"/>
+                    <connections>
+                        <outlet property="datePicker" destination="7Rv-de-pJk" id="R22-Zc-iA6"/>
+                        <outlet property="durationLabel" destination="xJc-6Y-cxi" id="6NJ-oA-gtR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rw-xL-CCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029" y="779"/>
+            <point key="canvasLocation" x="1028.985507246377" y="778.79464285714278"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="tFA-5w-rJe">
+            <objects>
+                <hostingController id="bha-jw-fUB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g77-CG-Qgt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="942"/>
         </scene>
         <!--Record-->
         <scene sceneID="DWs-pE-Dnm">

@@ -21,6 +21,8 @@
 		EEC31B51263FCB4F00736CCA /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = EEC31B50263FCB4F00736CCA /* UICircularProgressRing */; };
 		EEC31BA126405B7400736CCA /* RoundTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BA026405B7400736CCA /* RoundTabBarController.swift */; };
 		EEC31BA626405BF000736CCA /* RoundTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BA526405BF000736CCA /* RoundTabBar.swift */; };
+		EEC31BB3264060ED00736CCA /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BB2264060ED00736CCA /* TimeViewController.swift */; };
+		EEC31BC0264065EC00736CCA /* TimerRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BBF264065EC00736CCA /* TimerRing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		EE0694672638599E007F9E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEC31BA026405B7400736CCA /* RoundTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTabBarController.swift; sourceTree = "<group>"; };
 		EEC31BA526405BF000736CCA /* RoundTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTabBar.swift; sourceTree = "<group>"; };
+		EEC31BB2264060ED00736CCA /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		EEC31BBF264065EC00736CCA /* TimerRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,8 @@
 			children = (
 				EE06944726385995007F9E26 /* ViewController.swift */,
 				EEC31BA026405B7400736CCA /* RoundTabBarController.swift */,
+				EEC31BB2264060ED00736CCA /* TimeViewController.swift */,
+				EEC31BBF264065EC00736CCA /* TimerRing.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -452,7 +458,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC31BC0264065EC00736CCA /* TimerRing.swift in Sources */,
 				EE06944826385995007F9E26 /* ViewController.swift in Sources */,
+				EEC31BB3264060ED00736CCA /* TimeViewController.swift in Sources */,
 				EE06944426385995007F9E26 /* AppDelegate.swift in Sources */,
 				EEC31BA126405B7400736CCA /* RoundTabBarController.swift in Sources */,
 				EEC31BA626405BF000736CCA /* RoundTabBar.swift in Sources */,
