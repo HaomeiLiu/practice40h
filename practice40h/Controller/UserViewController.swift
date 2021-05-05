@@ -11,13 +11,17 @@ import RealmSwift
 class UserViewController: UIViewController {
     var userRealm: Realm?
 
+    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         print(userRealm!.objects(User.self))
-        let user = app.currentUser!
-        print(user)
+//        let user = app.currentUser!
+        userLabel.text = "Welcome, User!"
+        
     }
     
     @IBAction func userDidLoggedOut(_ sender: UIButton) {
@@ -29,6 +33,8 @@ class UserViewController: UIViewController {
                     DispatchQueue.main.async {
                         print("Logged out!")
                         //Switch
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeViewController
+                            self.present(vc, animated: true, completion: nil)
                     }
                 }
             }))

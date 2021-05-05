@@ -14,7 +14,7 @@ struct TimerRingExample: View {
 
     private static let timeFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .full
+        formatter.unitsStyle = .brief
         formatter.allowedUnits = [.hour, .minute, .second]
         return formatter
     }()
@@ -22,9 +22,8 @@ struct TimerRingExample: View {
     var body: some View {
         VStack {
             TimerRing(
-                time: .minutes(data.duration),
+                time: .minutes(data.time),
                 delay: .seconds(0.5),
-//                elapsedTime: data.done ? .minutes(data.duration) : .minutes(0),
                 innerRingStyle: .init(
                     color: .color(.green),
                     strokeStyle: .init(lineWidth: 16, lineCap: .round, lineJoin: .round),
@@ -33,7 +32,6 @@ struct TimerRingExample: View {
                 isPaused: $data.paused,
                 isDone: $data.done
             ) { currentTime in
-                 
                 Text("\(Self.timeFormatter.string(from: currentTime) ?? "NaN")")
                     .font(.title)
                     .bold()
@@ -54,18 +52,16 @@ struct TimerRingExample: View {
                     .font(.headline)
             }
             
-            Text("Duration: \(data.duration)")
         }
-        .navigationBarTitle("Timer Ring")
     }
 }
 
 class TimerData: ObservableObject{
-    @Published var duration: Double
+    @Published var time: Double
     @Published var paused: Bool
     @Published var done: Bool
-    init(duration: Double, paused: Bool, done: Bool){
-        self.duration = duration
+    init(time: Double, paused: Bool, done: Bool){
+        self.time = time
         self.paused = paused
         self.done = done
     }

@@ -14,28 +14,6 @@ class RoundTabBarController: UITabBarController, UITabBarControllerDelegate {
     var userRealm: Realm?
     //var notificationToken: NotificationToken?
     var userData: User?
-            
-//    init(userRealm: Realm) {
-//        print("initializing roundTabBarController")
-//        self.userRealm = userRealm
-//
-//        super.init(nibName: nil, bundle: nil)
-//
-//        // TODO: Observe user realm for user objects
-//        let usersInRealm = userRealm.objects(User.self)
-//        notificationToken = usersInRealm.observe { [weak self, usersInRealm] (_) in
-//            self?.userData = usersInRealm.first
-//        }
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-//    deinit {
-//        // TODO: invalidate notificationToken
-//    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

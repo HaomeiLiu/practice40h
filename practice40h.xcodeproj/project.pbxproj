@@ -18,6 +18,8 @@
 		EE0694502638599D007F9E26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE06944E2638599D007F9E26 /* LaunchScreen.storyboard */; };
 		EE06945B2638599E007F9E26 /* practice40hTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06945A2638599E007F9E26 /* practice40hTests.swift */; };
 		EE0694662638599E007F9E26 /* practice40hUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0694652638599E007F9E26 /* practice40hUITests.swift */; };
+		EEBE3E222642DAB1006D0187 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBE3E212642DAB1006D0187 /* Font.swift */; };
+		EEBE3E2F2642E760006D0187 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBE3E2E2642E760006D0187 /* ShareViewController.swift */; };
 		EEC31B51263FCB4F00736CCA /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = EEC31B50263FCB4F00736CCA /* UICircularProgressRing */; };
 		EEC31BA126405B7400736CCA /* RoundTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BA026405B7400736CCA /* RoundTabBarController.swift */; };
 		EEC31BA626405BF000736CCA /* RoundTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC31BA526405BF000736CCA /* RoundTabBar.swift */; };
@@ -69,6 +71,8 @@
 		EE0694612638599E007F9E26 /* practice40hUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = practice40hUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0694652638599E007F9E26 /* practice40hUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practice40hUITests.swift; sourceTree = "<group>"; };
 		EE0694672638599E007F9E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEBE3E212642DAB1006D0187 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		EEBE3E2E2642E760006D0187 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		EEC31BA026405B7400736CCA /* RoundTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTabBarController.swift; sourceTree = "<group>"; };
 		EEC31BA526405BF000736CCA /* RoundTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTabBar.swift; sourceTree = "<group>"; };
 		EEC31BB2264060ED00736CCA /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 				EEC31BBF264065EC00736CCA /* TimerRing.swift */,
 				EEC31BD12641C9DD00736CCA /* WelcomeViewController.swift */,
 				EEC31BDB2641F4AC00736CCA /* UserViewController.swift */,
+				EEBE3E2E2642E760006D0187 /* ShareViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			children = (
 				EE06944526385995007F9E26 /* SceneDelegate.swift */,
 				EE06944326385995007F9E26 /* AppDelegate.swift */,
+				EEBE3E212642DAB1006D0187 /* Font.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -468,10 +474,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEC31BD72641D58800736CCA /* RealmModels.swift in Sources */,
+				EEBE3E222642DAB1006D0187 /* Font.swift in Sources */,
 				EEC31BDC2641F4AD00736CCA /* UserViewController.swift in Sources */,
 				EEC31BC0264065EC00736CCA /* TimerRing.swift in Sources */,
 				EEC31BD22641C9DD00736CCA /* WelcomeViewController.swift in Sources */,
 				EE06944826385995007F9E26 /* ViewController.swift in Sources */,
+				EEBE3E2F2642E760006D0187 /* ShareViewController.swift in Sources */,
 				EEC31BB3264060ED00736CCA /* TimeViewController.swift in Sources */,
 				EE06944426385995007F9E26 /* AppDelegate.swift in Sources */,
 				EEC31BA126405B7400736CCA /* RoundTabBarController.swift in Sources */,
