@@ -17,7 +17,6 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     var formatterDB = DateFormatter()
     var formatterDisplay = DateFormatter()
     
-    @IBOutlet weak var timeline: ISTimeline!
     @IBOutlet weak var displayLabel: UILabel!
     
     override func viewDidLoad() {
@@ -55,7 +54,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
             print("\(formatterDB.string(from: date)) has \(existToday.count) entries")
             let sessions = existToday.first?.sessions
             renderTimeline(sessions!)
-            displayLabel.text = "You practiced \(String(describing: existToday.first?.total_duration))."
+            displayLabel.text = "You practiced \( existToday.first?.total_duration ?? 0) min."
         }
 
         
@@ -84,7 +83,12 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     //Delegate Appearance
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
         //Same as shouldSelect
-        return nil
+        let realm = try! Realm()
+        let existToday = realm.objects(DayItem.self).filter("date == '\(formatterDB.string(from: date))'")
+        if existToday.count == 0 {
+            return nil
+        }
+        return UIColor.green
     }
     
     //Data Source
@@ -98,7 +102,10 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     }
     
     func renderTimeline(_ sessions: List<Session>){
-        
+        let frame = CGRect(x: 20.0, y: 480.0, width: 380.0, height: 335.0)
+
+        let timeline = ISTimeline(frame: frame)
+        timeline.backgroundColor = .white
         timeline.backgroundColor = .white
         timeline.bubbleColor = .init(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
         timeline.titleColor = .black
@@ -113,7 +120,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
 
         for i in 0..<sessions.count {
             let point = ISPoint(title: "\(formatterDisplay.string(from: sessions[i].begin))")
-            point.description = "Practice Duration: \(sessions[i].duration)"
+            point.description = "Practice Duration: \(sessions[i].duration) min"
             point.lineColor = i % 2 == 0 ? .red : .green
             point.pointColor = point.lineColor
             point.touchUpInside =

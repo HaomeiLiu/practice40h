@@ -139,14 +139,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fu9-Z9-MOe" customClass="ISTimeline" customModule="ISTimeline">
-                                <rect key="frame" x="20" y="478" width="374" height="335"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="335" id="YJp-hp-u1x"/>
-                                    <constraint firstAttribute="width" constant="374" id="ifh-px-A6e"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a date for details." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QI1-Od-h7X">
                                 <rect key="frame" x="20" y="409" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -158,14 +150,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QI1-Od-h7X" firstAttribute="centerX" secondItem="BkN-Ae-DZm" secondAttribute="centerX" id="4sU-Mn-qmy"/>
-                            <constraint firstItem="fu9-Z9-MOe" firstAttribute="top" secondItem="QI1-Od-h7X" secondAttribute="bottom" constant="33" id="Eci-OK-baY"/>
-                            <constraint firstItem="6jy-Bq-lAM" firstAttribute="bottom" secondItem="fu9-Z9-MOe" secondAttribute="bottom" id="e4p-4H-aWs"/>
+                            <constraint firstItem="6jy-Bq-lAM" firstAttribute="bottom" secondItem="QI1-Od-h7X" secondAttribute="bottom" constant="368" id="XUw-9H-4Wi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Record" image="calendar.circle" catalog="system" id="JNV-28-0Ri"/>
                     <connections>
                         <outlet property="displayLabel" destination="QI1-Od-h7X" id="Jc5-o0-YNk"/>
-                        <outlet property="timeline" destination="fu9-Z9-MOe" id="Lvc-ay-xcY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ik4-Fh-XbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
