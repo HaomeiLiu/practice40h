@@ -16,15 +16,15 @@ class User: Object {
         return "_id"
 }}
 
-class Day: Object {
-    @objc dynamic var date = Date()
+class DayItem: Object {
+    @objc dynamic var date = ""
     @objc dynamic var total_duration = 0.0
     @objc dynamic var total_count = 0
     let sessions = List<Session>()
     var dayHadPracticed: Bool{
         return sessions.count > 0
     }
-    convenience init(_ date : Date, _ total_duration : Double, _ total_count : Int) {
+    convenience init(_ date : String, _ total_duration : Double, _ total_count : Int) {
         self.init()
         self.date = date
         self.total_duration = total_duration

@@ -10,6 +10,7 @@ target 'practice40h' do
   # pod 'Firebase/Firestore'
   pod 'FSCalendar'
   pod 'RealmSwift'
+  pod 'ISTimeline'
 
   target 'practice40hTests' do
     inherit! :search_paths

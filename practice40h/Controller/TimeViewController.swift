@@ -14,7 +14,7 @@ class TimeViewController: UIViewController {
     var duration: Double = 60
     var timer: Timer?
     var timerData: TimerData = TimerData(duration:60, paused: true, done: false)
-    var today = Date()
+    var today = ""
     var begin = Date()
     var end = Date()
     
@@ -32,7 +32,7 @@ class TimeViewController: UIViewController {
         dateFormatter.timeStyle = DateFormatter.Style.none
         dateFormatter.dateStyle = DateFormatter.Style.short
 
-        dateFormatter.string(from: date)
+        today = dateFormatter.string(from: date)
     }
     
     @IBSegueAction func addTimerRingView(_ coder: NSCoder) -> UIViewController? {
@@ -57,8 +57,8 @@ class TimeViewController: UIViewController {
         end = Date()
         
         let realm = try! Realm()
-        let predicate = NSPredicate(format: "date >= %@ && date < %@", today.addingTimeInterval(-60*60*24) as NSDate, today.addingTimeInterval(60*60*24) as NSDate)
-        let existToday = realm.objects(Day.self).filter(predicate)
+//        let predicate = NSPredicate(format: "date >= %@ && date < %@", today.addingTimeInterval(-60*60*24) as NSDate, today.addingTimeInterval(60*60*24) as NSDate)
+        let existToday = realm.objects(DayItem.self).filter("date == '\(today)'")
         print(existToday)
         let newSession = Session(duration, begin, end, "")
         try! realm.write{
@@ -66,7 +66,7 @@ class TimeViewController: UIViewController {
         }
         if existToday.count == 0 {
             print("today does not exist")
-            let newDay = Day(today, duration, 1)
+            let newDay = DayItem(today, duration, 1)
             newDay.sessions.append(newSession)
             try! realm.write{
                 realm.add(newDay)
