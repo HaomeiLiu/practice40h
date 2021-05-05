@@ -12,15 +12,27 @@ import RealmSwift
 
 class TimeViewController: UIViewController {
     var duration: Double = 60
-    var timer: Timer!
+    var timer: Timer?
     var timerData: TimerData = TimerData(duration:60, paused: true, done: false)
+    var today = Date()
+    var begin = Date()
+    var end = Date()
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var displayLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        dateFormatter.dateStyle = DateFormatter.Style.short
+
+        dateFormatter.string(from: date)
     }
     
     @IBSegueAction func addTimerRingView(_ coder: NSCoder) -> UIViewController? {
@@ -33,13 +45,47 @@ class TimeViewController: UIViewController {
         timerData.duration = duration
         timerData.paused = false
         timerData.done = false
+        begin = Date()
+        print("start time: \(begin)")
     }
     
     @IBAction func userDidTappedReset(_ sender: UIButton) {
-        timer.invalidate()
+        timer?.invalidate()
         datePicker.isHidden = false
         timerData.paused = true
         timerData.done = true
+        end = Date()
+        
+        let realm = try! Realm()
+        let predicate = NSPredicate(format: "date >= %@ && date < %@", today.addingTimeInterval(-60*60*24) as NSDate, today.addingTimeInterval(60*60*24) as NSDate)
+        let existToday = realm.objects(Day.self).filter(predicate)
+        print(existToday)
+        let newSession = Session(duration, begin, end, "")
+        try! realm.write{
+            realm.add(newSession)
+        }
+        if existToday.count == 0 {
+            print("today does not exist")
+            let newDay = Day(today, duration, 1)
+            newDay.sessions.append(newSession)
+            try! realm.write{
+                realm.add(newDay)
+            }
+            displayLabel.text = "You have practiced \(duration) minutes today."
+        }
+        else{
+            print("today exists")
+            try! realm.write{
+                existToday.first?.sessions.append(newSession)
+                existToday.first?.total_count += 1
+                existToday.first?.total_duration += duration
+            }
+            displayLabel.text = "You have practiced \(String(describing: existToday.first?.total_duration)) minutes today."
+        }
+        
+        
+        
+        
     }
     
     @IBAction func userDidChangedDuration(_ sender: UIDatePicker) {
@@ -52,10 +98,9 @@ class TimeViewController: UIViewController {
             duration -= 1
         }
         else{
-            timer.invalidate()
+            timer?.invalidate()
             duration = 0
         }
-        durationLabel.text = "\(duration)"
     }
     
     

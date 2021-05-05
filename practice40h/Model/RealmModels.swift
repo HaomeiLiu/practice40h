@@ -14,4 +14,34 @@ class User: Object {
     @objc dynamic var name: String = ""
     override static func primaryKey() -> String? {
         return "_id"
-    }}
+}}
+
+class Day: Object {
+    @objc dynamic var date = Date()
+    @objc dynamic var total_duration = 0.0
+    @objc dynamic var total_count = 0
+    let sessions = List<Session>()
+    var dayHadPracticed: Bool{
+        return sessions.count > 0
+    }
+    convenience init(_ date : Date, _ total_duration : Double, _ total_count : Int) {
+        self.init()
+        self.date = date
+        self.total_duration = total_duration
+        self.total_count = total_count
+    }
+}
+
+class Session: Object{
+    @objc dynamic var duration: Double = 0.0
+    @objc dynamic var begin = Date()
+    @objc dynamic var end = Date()
+    @objc dynamic var mood = ""
+    convenience init(_ duration: Double, _ begin : Date, _ end: Date, _ mood: String) {
+        self.init()
+        self.duration = duration
+        self.begin = begin
+        self.end = end
+        self.mood = mood
+    }
+}

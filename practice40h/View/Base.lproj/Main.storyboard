@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eqP-wC-idP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LQn-1e-FaS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029" y="1501"/>
+            <point key="canvasLocation" x="1938" y="1486"/>
         </scene>
         <!--Practice!-->
         <scene sceneID="X5f-Nj-2Bl">
@@ -70,13 +70,6 @@
                                     <segue destination="bha-jw-fUB" kind="embed" destinationCreationSelector="addTimerRingView:" id="gGS-9b-3l0"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJc-6Y-cxi">
-                                <rect key="frame" x="330" y="15" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-dq-u9i">
                                 <rect key="frame" x="115" y="747" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
@@ -90,6 +83,12 @@
                                     <action selector="userDidChangedDuration:" destination="WKn-NK-UBb" eventType="valueChanged" id="Hic-BV-hNl"/>
                                 </connections>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You have practiced 0 minutes today." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGq-gY-OVd">
+                                <rect key="frame" x="66" y="439" width="288" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31u-tz-nTW">
                                 <rect key="frame" x="262" y="747" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
@@ -102,9 +101,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YWN-kT-38Q" firstAttribute="bottom" secondItem="31u-tz-nTW" secondAttribute="bottom" constant="36" id="0uV-Mz-Vda"/>
+                            <constraint firstItem="WGq-gY-OVd" firstAttribute="centerX" secondItem="pMb-Wl-F5t" secondAttribute="centerX" id="EiE-UI-cZc"/>
                             <constraint firstItem="YWN-kT-38Q" firstAttribute="trailing" secondItem="31u-tz-nTW" secondAttribute="trailing" constant="113" id="QPZ-FA-Ter"/>
                             <constraint firstItem="YWN-kT-38Q" firstAttribute="bottom" secondItem="bnC-dq-u9i" secondAttribute="bottom" constant="36" id="cVq-d2-6fJ"/>
                             <constraint firstItem="bnC-dq-u9i" firstAttribute="top" secondItem="7Rv-de-pJk" secondAttribute="bottom" constant="28" id="gCo-HH-lFc"/>
+                            <constraint firstItem="WGq-gY-OVd" firstAttribute="top" secondItem="JAi-Mr-6ll" secondAttribute="bottom" constant="17" id="igc-DF-zot"/>
                             <constraint firstItem="JAi-Mr-6ll" firstAttribute="centerX" secondItem="pMb-Wl-F5t" secondAttribute="centerX" id="lNP-Am-N9J"/>
                             <constraint firstItem="JAi-Mr-6ll" firstAttribute="top" secondItem="YWN-kT-38Q" secondAttribute="top" constant="57" id="lU6-Af-tdy"/>
                             <constraint firstItem="7Rv-de-pJk" firstAttribute="leading" secondItem="YWN-kT-38Q" secondAttribute="leading" id="uMD-uB-u3A"/>
@@ -115,7 +116,7 @@
                     <tabBarItem key="tabBarItem" title="Practice!" image="music.note" catalog="system" id="Ucf-VX-QNw"/>
                     <connections>
                         <outlet property="datePicker" destination="7Rv-de-pJk" id="R22-Zc-iA6"/>
-                        <outlet property="durationLabel" destination="xJc-6Y-cxi" id="6NJ-oA-gtR"/>
+                        <outlet property="displayLabel" destination="WGq-gY-OVd" id="QYh-Vh-bpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rw-xL-CCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -144,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ik4-Fh-XbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089.8550724637682" y="107.8125"/>
+            <point key="canvasLocation" x="1939" y="88"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="kmi-lb-ibc">
